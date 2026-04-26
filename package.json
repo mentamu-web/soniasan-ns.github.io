@@ -1,0 +1,14 @@
+{
+  "name": "mentamu-automation",
+  "version": "1.0.0",
+  "description": "Notion自動化スクリプト",
+  "main": "src/automation.js",
+  "scripts": {
+    "start": "node src/automation.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5",
+    "googleapis": "^171.4.0"
+  }
+}
