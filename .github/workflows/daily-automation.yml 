@@ -2,23 +2,19 @@ name: Daily Notion to Sheets Sync
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # 毎日日本時間18:00に実行
-  workflow_dispatch:      # 手動実行も可能
+    - cron: '0 9 * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-
       - name: Install dependencies
         run: npm install
-
       - name: Run automation
         run: node src/automation.js
         env:
